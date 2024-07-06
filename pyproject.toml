@@ -1,0 +1,29 @@
+[project]
+name = "chatchart"
+version = "0.1.0"
+description = "Message charting tool for Telegram."
+authors = [
+    { name = "thegreathir", email = "aaph1377@gmail.com" }
+]
+dependencies = [
+    "telethon>=1.36.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+"chatchart" = "chatchart:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/chatchart"]
